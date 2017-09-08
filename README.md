@@ -37,3 +37,28 @@ Plan of Attack
     - We can put the example on the world map. 
     - Data (lots of columns) => SOM => Visualization 
   - Additional Reading: Self-organizing map -> https://pdfs.semanticscholar.org/7403/57022426b93b607ea782715c63479f4f8c41.pdf
+
+### Revisiting K-Means Clustering
+- Before K-Means 
+- After K-Means
+- Prepare you for SOM, process of pushing and pulling as the centroids by the actual datapoints. 
+- K-Means is unsupervised machine learning algorithm
+
+### K-Means Intuition: Understanding K-Means
+- Algorithm to cluster your data, discovering categories in dataset you wouldn't find yourself
+- Scatterplot (Before K-Means), plot X&Y
+- identify the groups itself, K-Means => Clusters of data in dataset
+- Can work with multi-dimensional objects
+- How did it do that?
+   - Step 1: Choose the numebr K of clusters 
+   - Step 2: Select at random K points, the centroids (not necessairly from your dataset) 
+   - Step 3: Assign each data point to the closest centroid => that forms K clusters
+   - Step 4: Compute the place the new centroid of each cluster
+   - Step 5: Reassign each data point to the new closest centroid. If any reassignment took place, go to Step 4, otherwise go to FINISH
+   - Model is Ready
+- Example
+   - Step 1: K = 2
+   - Actual points or random points
+   - Assign each data point to the closest centroid => forms K clusters
+   - perpindicular line, any point on green line is equidistant, euclidean distances (e.g.)
+   - Reassign each data point to the new closest centroid. If any reassignment took place
