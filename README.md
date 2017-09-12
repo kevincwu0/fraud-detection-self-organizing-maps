@@ -32,6 +32,7 @@ Plan of Attack
     - Results in a Two-Dimensional Representation of your dataset
     - Purpose of SOMs is to reduce the number of columns
   - E.g. clusters of indicator (39 parameters, quality of life, factors, state of health, etc. huge dataset of 200+ countries) 
+  - Multi-dimensional dataset into two dimensions
   - SOM can reduce into a map
   - Unsupervised Learning -> has training data but no labels in the training data. Not like a CNN where it learns what it's seeing and then apply that to the test data. Unsupervised it's given a lots of data and learns to group these datas (it didn't learn for example that Belgium, Sweden, Japan should be grouped together but rather that ah they have similar datasets based on all of the indicators looking at) similarity - learned on its own. 
     - We can put the example on the world map. 
@@ -61,4 +62,33 @@ Plan of Attack
    - Actual points or random points
    - Assign each data point to the closest centroid => forms K clusters
    - perpindicular line, any point on green line is equidistant, euclidean distances (e.g.)
-   - Reassign each data point to the new closest centroid. If any reassignment took place
+   - Reassign each data point to the new closest centroid. If any reassignment took place  
+### How do SOMs Learn?
+- E.g. three features in our input vectors, nine nodes in output
+- SOMs used to reduce dimensionality of the dataset, 
+- Three features => Columns, thousands of thousands rows
+- SOMs output is always 2D
+- SOMs familiar to us ANN, RNN, CNN
+   - Same network, only difference is the position of the nodes
+   - SOMs are very different from supervised neural networks
+      - 1) Much much easier than ANN, simple and straightforward
+      - 2) Concepts that have the same name, but different meaning, might confuse meanings
+   - Three synapases to the top output node (weight assigned, w1.1, w1.2, w1.3) 
+   - Weights have a different connotation than ANN, in ANN weights were used to multiply the input by the weight added up and applied an activation function
+   - No activation function in SOMs
+   - Weights are a characteristics of the node itself, node has coordinates
+   - Node like a ghost in our input space, where it can fit, weights are the coordinates of the node in the input space
+   - Each is a ghost or an imaginary data point, trying to blend in
+   - Has its own weights at the start of the algorithm
+   - So why is this important, core of the self-organizing map algorithm
+   - rows which of these nodes is closets to our rows in our dataset
+   - competition -> every node which is the closest to our input state - euclidean distance, get values close to 1 (0 and 1 input, normalization or standardization) 
+   - Row #1 to each node, BMU (Best Matching Unit) the closest -> core of the SOM algorithm
+   - What happens next?
+      - Found BMU, SOM will update 'weights' - weights are characteristic of nodes in SOM, even closer to our first row in our data set
+      - SOM is coming closer to the datapoint, drag the SOM closer to the point
+      - Self-organizes onto input data, some of the nearby points are being dragged closer to this point
+      - COme closer to the row that they matched up to, closer to BMu heavier weights of data, weights are updated less
+   - Whole chain, whole structure same direction, harder pulled BMU matched up with, radius concept works
+   - How do they fight with each other? (Green BMU, Blue BMU, Red BMU) -> pulled much harder and becomes, greenish blue, pull on green and blue, both have an impact
+   
