@@ -91,4 +91,18 @@ Plan of Attack
       - COme closer to the row that they matched up to, closer to BMu heavier weights of data, weights are updated less
    - Whole chain, whole structure same direction, harder pulled BMU matched up with, radius concept works
    - How do they fight with each other? (Green BMU, Blue BMU, Red BMU) -> pulled much harder and becomes, greenish blue, pull on green and blue, both have an impact
+### How do SOMs Learn Pt.2
+   - Best Matching Units (BMUs) are updated
+   - Sophisticated example (5 BMUs)
+   - BMUs updated even closer to row they matched up to, area around it radius, radius selected at beginning is usually - nodes are updated
+   - Purple node (row that is matched up), dragged closer and closer - resistance push and pull, new epoch, unique KOHONAN learning algorthm
+   - radius starts shrinking through the algorithm - pulling on nodes, radius is shrinked, nodes are pulled - process becomes more and more accurate, more and more iterations (precise, more laser specific manner), mask for your data
+   - battle between different nodes, settled into some kind of representation
+   - Takeaways from the tutorial:
+      - 1) SOMs retain topology of the input set - does everything it can to be as close to the data, like a mask for dataset, understanding datasets better
+      - 2) SOMs reveal correlations that are not easily identified SOMs can neatly put all anyalze into a mso, see into map easily
+      - 3) SOMs classify data without supervision - don't actually need labels (CNNs => train our dataset to recognize objects, after lots and lots of iterations - don't need any labels - SOMs will extract feature or show us dependencies and correlation not expecting) - used in scenarios you don't know what you're looking for
+      - 4) No target vector -> no backpropagation - unsupervised, we don't actually have a target vector, no lateral connection between output nodes, pull on one node other gets pulled, radius we outline
+      - 5) No Neural Network - output, there's a grid behind, are indeed on a self-organizing map
+   - Soft math on SOMs => http://ai-junkie.com/ann/som/som1.html
    
