@@ -104,10 +104,17 @@ Plan of Attack
       - 3) SOMs classify data without supervision - don't actually need labels (CNNs => train our dataset to recognize objects, after lots and lots of iterations - don't need any labels - SOMs will extract feature or show us dependencies and correlation not expecting) - used in scenarios you don't know what you're looking for
       - 4) No target vector -> no backpropagation - unsupervised, we don't actually have a target vector, no lateral connection between output nodes, pull on one node other gets pulled, radius we outline
       - 5) No Neural Network - output, there's a grid behind, are indeed on a self-organizing map
-   - Soft math on SOMs => http://ai-junkie.com/ann/som/som1.html
+   - Soft math on SOMs => http://ai-junkie.com/ann/som/som1.html 
 - Live Example of SOMs
    - Inputs of eight colors (Red, green, blue, orange, yellow, purple, RGB code for each color)
    - From 0 to 1, 8 rows, three columns into SOMs
    - Starting weights at random, dark blue (perserve topology) 
    - Very simple SOM in action
+
+### How to read an Advanced SOM
+   - Voting patterns in the U.S. Congress
+   - Example of Wikipedia, voting results of voting patterns of U.S. Congress - members of congress, over 535 members, 100 senators, which members of congress are similar to each and which are disimilar
+   - See results and visual overlay with the original cluster 
+   - Why is there a yellow spot in the middle, overlaid, not a 1-to-1 representation was voting as a yes
+   - https://www.visualcinnamon.com/2013/07/self-organizing-maps-creating-hexagonal.html
    
