@@ -105,4 +105,9 @@ Plan of Attack
       - 4) No target vector -> no backpropagation - unsupervised, we don't actually have a target vector, no lateral connection between output nodes, pull on one node other gets pulled, radius we outline
       - 5) No Neural Network - output, there's a grid behind, are indeed on a self-organizing map
    - Soft math on SOMs => http://ai-junkie.com/ann/som/som1.html
+- Live Example of SOMs
+   - Inputs of eight colors (Red, green, blue, orange, yellow, purple, RGB code for each color)
+   - From 0 to 1, 8 rows, three columns into SOMs
+   - Starting weights at random, dark blue (perserve topology) 
+   - Very simple SOM in action
    
