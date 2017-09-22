@@ -118,3 +118,24 @@ Plan of Attack
    - Why is there a yellow spot in the middle, overlaid, not a 1-to-1 representation was voting as a yes
    - https://www.visualcinnamon.com/2013/07/self-organizing-maps-creating-hexagonal.html
    
+### K-Means Clustering Pt.2
+- Random Initialization Trap
+   - initialize the centroid get to these clusters
+   - What if we selected in centroid in different places, deterministic
+- What if we had a bad initialization
+- Steps for K-Means
+   - 1. Choose the number K of clusters
+   - 2. Select at random K points, the centroids (not necessairly from your dataset)
+   - 3. Assign each data point to the closest centorid -> that forms K clusters
+   - 4. Compute and place the new centroid of each cluser
+   - 5. Reassign each data point to the new closest centroid. If any reassignemtn took place, go to Step 4, otherwise go to finish
+- K-Means++ algorithm => involved in the background, don't need to implement, false or non-desirable clusters specific selection of the algorithm - keep in mind. 
+
+### K-Means Clustering Pt.3
+- algorithm to find the right number of clusters
+- data science problem, cluster 1, cluster 2, cluster 3
+- WCSS = summation of elements (each cluster) centroid value sum across distance(P, C)
+- How many max cluster, we can have as many elements as points for clusters
+- WCSS equal to zero if every point has a cluster, centroid is 0
+- WCSS is constantly decreasing
+- Elbow Method look for the change to less substantial drop (Optimal Number of Clusters) 
