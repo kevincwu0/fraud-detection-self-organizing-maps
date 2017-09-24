@@ -40,3 +40,19 @@ sc = MinMaxScaler(feature_range = (0, 1))
 # fit sc object to X so sc gets all info (min and max) and all info for normalization
 # apply normalization to X, fit method returns normalized version of X
 X = sc.fit_transform(X)
+
+# Training the SOM
+# Unsupervised Learning, we don't consider
+# sigma is the radius of the different neighborhoods
+# learning weight, hyperparameter decides how much weight
+# higher the learning rates, faster will be convergence
+# lower the learning rate, the slower it takes for SOM to build
+from minisom import MiniSom
+som = MiniSom(x = 10, y = 10, input_len = 15, sigma = 1.0, learning_rate = 0.5)
+
+# randomly initialize the weight vectors to small numbers close to 0
+som.random_weights_init(X)
+
+# train som on X, matrix of features and patterns recognized
+som.train_random(data = X, num_iteration = 100)
+
