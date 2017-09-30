@@ -56,3 +56,25 @@ som.random_weights_init(X)
 # train som on X, matrix of features and patterns recognized
 som.train_random(data = X, num_iteration = 100)
 
+# Visualising the results
+# two-dimensional grid of the winning nodes
+# get M-ID Mean Inter-neruon Distances, Inside the neighborhood, radius, winning 
+# higher MID, winning, outlier neuron far from the general neuron, fraud, winning nodes
+# with the higher M-ID. Winning node will use different nodes
+
+from pylab import bone, pcolor, colorbar, plot, show
+bone()
+pcolor(som.distance_map().T)
+colorbar()
+markers = ['o', 's']
+colors = ['r', 'g']
+for i, x in enumerate(X):
+    w = som.winner(x)
+    plot(w[0] + 0.5,
+         w[1] + 0.5,
+         markers[y[i]],
+         markeredgecolor = colors[y[i]],
+         markerfacecolor = 'None',
+         markersize = 10,
+         markeredgewidth = 2)
+show()
